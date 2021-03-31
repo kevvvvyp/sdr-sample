@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  ### MSSQL ###
+  inmMssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: A_Str0ng_Required_Password
+      ACCEPT_EULA: Y
+    ports:
+      - '3334:3306'
+      - "1445:1433"

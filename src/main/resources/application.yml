@@ -1,0 +1,25 @@
+######################################################################
+# Spring Properties
+######################################################################
+spring:
+  application:
+    name: inm-data-rest-api
+  data:
+    rest:
+      base-path: "/api"
+  datasource:
+    url: jdbc:sqlserver://localhost:1445;database=stub  #TODO change me
+    username: sa #TODO change me
+    password: A_Str0ng_Required_Password  #TODO change me
+  hateoas:
+    use-hal-as-default-json-media-type: false
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect #TODO change me
+        default_schema: stub #TODO change me
+        globally_quoted_identifiers: true
+    show-sql: true
